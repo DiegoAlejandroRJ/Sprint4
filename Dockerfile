@@ -5,7 +5,7 @@ WORKDIR /app
 # Copia los archivos de tu proyecto al directorio de trabajo
 COPY . .
 # Construye tu aplicación con Gradle
-RUN gradle build #--no-daemon
+RUN gradle build --no-daemon
 # Cambia a una imagen más ligera de OpenJDK 17 para la ejecución
 FROM openjdk:17-jdk-slim
 # Establece el directorio de trabajo
